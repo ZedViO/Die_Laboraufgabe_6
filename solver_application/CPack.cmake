@@ -18,7 +18,7 @@ set(CPACK_RPM_PACKAGE_DESCRIPTION_SUMMARY "Solving quadratic equations app")
 
 
 set(CPACK_PACKAGE_VENDOR "Lüzius Erhardt")
-CPACK_DEBIAN_PACKAGE_MAINTAINER("luzio")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "luzio")
 
 set(CPACK_PACKAGE_FILE_NAME "solver-0.0.1-Linux-idk")
 set(CPACK_DEBIAN_PACKAGE_FILE_NAME "solver-0.0.1-Linux-idk")
