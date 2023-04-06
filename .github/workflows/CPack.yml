@@ -1,0 +1,33 @@
+name: CPack
+
+on:
+ push:
+   tags:
+     - v**
+
+jobs: 
+
+  build_linux:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Solver cmake
+      run: cmake ${{github.workspace}}/solver_application -B ${{github.workspace}}/solver_application/build
+
+    - name: Solver build
+      run: cmake --build ${{github.workspace}}/solver_application/build
+
+    - name: Package build
+      run: cmake --build ${{github.workspace}}/solver_application/build --target package
+
+    - name: Pack source build
+      run: cmake --build ${{github.workspace}}/solver_application/build --target package_source
+
+    - name: Release
+      uses: ncipollo/release-action@v1.10.0
+      with:
+        artifacts: "build/*.deb,build/*.rpm,build/*.tar.gz,build/*.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}

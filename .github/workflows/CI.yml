@@ -1,0 +1,24 @@
+name: Zusammenbau
+on: 
+ push:
+  branches: [main]
+ pull_request: 
+  branches: [main]
+
+jobs:
+ build_Linux:
+  runs-on: ubuntu-latest
+  steps:
+  - uses: actions/checkout@v3
+
+  - name: Zusammenmachung Solver 
+    run: cmake ${{github.workspace}}/solver_application/ -B ${{github.workspace}}/solver_application/build
+ 
+  - name: Bau Solver
+    run: cmake --build ${{github.workspace}}/solver_application/build
+
+  - name: Zusammenmachung HelloWorld
+    run: cmake ${{github.workspace}}/hello_world_application/ -B ${{github.workspace}}/hello_world_application/build
+  
+  - name: Bau Helloworld
+    run: cmake --build ${{github.workspace}}/hello_world_application/build
