@@ -23,9 +23,9 @@ set(CPACK_PACKAGE_FILE_NAME "solver-0.0.1-Linux-idk")
 set(CPACK_DEBIAN_PACKAGE_FILE_NAME "solver-0.0.1-Linux-idk")
 
 set(CPACK_SOURCE_INSTALLED_DIRECTORIES
-	"${CMAKE_SOURCE_DIR}/solver_application; slvr"
-	"${CMAKE_SOURCE_DIR}/solver_lib; slvr_lib"
-	"${CMAKE_SOURCE_DIR}/formatter_ex_lib; frmttr_ex_lib"
-	"${CMAKE_SOURCE_DIR}/formatter_lib; frmttr_lib")
+	"${CMAKE_SOURCE_DIR}/../solver_application; slvr"
+	"${CMAKE_SOURCE_DIR}/../solver_lib; slvr_lib"
+	"${CMAKE_SOURCE_DIR}/../formatter_ex_lib; frmttr_ex_lib"
+	"${CMAKE_SOURCE_DIR}/../formatter_lib; frmttr_lib")
 
 
