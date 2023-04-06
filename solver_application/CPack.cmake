@@ -28,4 +28,4 @@ set(CPACK_SOURCE_INSTALLED_DIRECTORIES
 	"${CMAKE_SOURCE_DIR}/../formatter_ex_lib; frmttr_ex_lib"
 	"${CMAKE_SOURCE_DIR}/../formatter_lib; frmttr_lib")
 
-
+include(CPack)
