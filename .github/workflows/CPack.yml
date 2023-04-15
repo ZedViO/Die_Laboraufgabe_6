@@ -29,5 +29,4 @@ jobs:
     - name: Release
       uses: ncipollo/release-action@v1.10.0
       with:
-        artifacts: "build/*.deb,build/*.rpm,build/*.tar.gz,build/*.zip"
-        token: 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
+        artifacts: "${{github.workspace}}/solver_application/build/*.deb,${{github.workspace}}/solver_application/build/*.tar.gz,${{github.workspace}}/solver_application/build/*.zip,${{github.workspace}}/solver_application/build/*.rpm"
