@@ -1,9 +1,0 @@
-Architecture: amd64
-Description: Solving quadratic equations app
-Maintainer: luzio
-Package: solver
-Priority: optional
-Section: devel
-Version: 0.0.1
-Installed-Size: 4
-
