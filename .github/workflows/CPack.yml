@@ -28,5 +28,4 @@ jobs:
 
     - name: Release
       uses: ncipollo/release-action@v1.10.0
-      with:
-        artifacts: "${{github.workspace}}/solver_application/build/*.deb,${{github.workspace}}/solver_application/build/*.tar.gz,${{github.workspace}}/solver_application/build/*.zip,${{github.workspace}}/solver_application/build/*.rpm"
+ 
