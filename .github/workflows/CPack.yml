@@ -30,5 +30,5 @@ jobs:
       uses: ncipollo/release-action@v1.10.0
 
       with:
-        artifacts: "build/*.deb,build/*.tar.gz,build/*.zip"
+        artifacts: "solver_application/build/*.deb,solver_application/build/*.tar.gz,solver_application/build/*.zip"
         token: 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 
