@@ -31,24 +31,4 @@ jobs:
 
       with:
         artifacts: "solver_application/build/*.deb,solver_application/build/*.tar.gz,solver_application/build/*.zip,solver_application/build/*.rpm"
-        token: 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 
-  
-  build_packages_msi:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v3
-
-    -  name: Build MSI
-       run: |
-         cd solver_application
-         mkdir build && cd build
-         cmake -DGENERATOR=BIN ..
-         cmake --build .
-         cpack -C CPackConfig.cmake -G WIX
-
-    - name: Release
-      uses: ncipollo/release-action@v1.10.0 
-
-      with:
-        artifacts: "solver_application/build/*.msi"
-        token: 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 
+        token: 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
