@@ -1,0 +1,27 @@
+name: dmg
+on:
+ push:
+   tags: 
+     - y**
+
+jobs:
+  build_packages_dmg:
+      runs-on: macos-latest
+      steps:
+      - uses: actions/checkout@v3
+
+      -  name: Build DMG
+         run: |
+           cd solver_application
+           mkdir build && cd build
+           cmake -DGENERATOR=BIN ..
+           cmake --build .
+           cpack -G DragNDrop
+
+      - name: Release
+        uses: ncipollo/release-action@v1.10.0 
+
+        with:
+          artifacts: "solver_application/build/*.dmg"
+          token: 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 
+
