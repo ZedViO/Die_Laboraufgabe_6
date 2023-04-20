@@ -23,5 +23,5 @@ jobs:
 
       with:
         artifacts: "solver_application/build/*.msi"
-        token: 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
+        token: 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
 #2

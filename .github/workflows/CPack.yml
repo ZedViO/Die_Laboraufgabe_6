@@ -31,4 +31,4 @@ jobs:
 
       with:
         artifacts: "solver_application/build/*.deb,solver_application/build/*.tar.gz,solver_application/build/*.zip,solver_application/build/*.rpm"
-        token: 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
+        token: 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
